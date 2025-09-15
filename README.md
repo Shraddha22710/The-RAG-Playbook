@@ -1,4 +1,4 @@
-![banner](docs/images/rag_banner.svg)
+![banner](docs/rag_banner.svg)
 
 ---
 
