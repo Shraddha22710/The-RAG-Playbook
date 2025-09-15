@@ -75,7 +75,7 @@ q_emb = q_emb / np.linalg.norm(q_emb, axis=1, keepdims=True)
 
 D, I = index.search(q_emb.astype("float32"), k=1)
 print("Best match:", documents[I[0][0]])
-
+```
 
 
 
