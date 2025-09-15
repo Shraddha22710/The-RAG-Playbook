@@ -126,7 +126,8 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 ## Visualizations
 
 ### A. RAG Pipeline
-```mermaid flowchart TD
+```mermaid
+flowchart TD
   U[User Query] --> R[Retriever]
   R -->|top-k passages| G[Generator (LLM)]
   G --> A[Answer + Citations]
