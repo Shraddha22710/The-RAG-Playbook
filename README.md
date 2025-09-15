@@ -68,9 +68,9 @@ git clone https://github.com/<yourname>/awesome-rag-playbook.git
 cd awesome-rag-playbook
 ```
 
-2. Create virtual environment & install
-   ```python
-   python -m venv .venv
+2. **Create virtual environment & install**
+```python
+python -m venv .venv
 # mac/linux
 source .venv/bin/activate
 # windows
@@ -79,30 +79,30 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 ```
-3. Add sample documents
+3. **Add sample documents**
 Put .txt files into data/documents/ (regulation snippets, contracts, invoices).
 
-4. Build index & test retrieval
+4. **Build index & test retrieval**
 ```python
 python src/simple_rag.py --build-index --data-dir data/documents
 python src/simple_rag.py --query "Does this contract mention GDPR data transfers?"
 ```
 
-5. Run demo app
-   ```python
+5. **Run demo app**
+```python
    streamlit run src/app.py
 ```
 
 ## 🎓 Learning Roadmap
-
-- **Step 1** → Intro to RAG (GenAI vs RAG vs Agents).  
-- **Step 2** → Chunking Strategies + try `src/chunking.py`.  
-- **Step 3** → Build FAISS index with `src/simple_rag.py`.  
-- **Step 4** → Study Retrievers & `rag_pipeline.py`.  
-- **Step 5** → Explore Advanced RAG (multi-hop, multimodal).  
-- **Step 6** → Production RAG: A/B testing, security, privacy.  
-- **Step 7** → Run notebooks to compare LLM vs RAG and experiment with agent flows.  
-
+```
+> **Step 1** → Intro to RAG (GenAI vs RAG vs Agents).  
+> **Step 2** → Chunking Strategies + try `src/chunking.py`.  
+> **Step 3** → Build FAISS index with `src/simple_rag.py`.  
+> **Step 4** → Study Retrievers & `rag_pipeline.py`.  
+> **Step 5** → Explore Advanced RAG (multi-hop, multimodal).  
+> **Step 6** → Production RAG: A/B testing, security, privacy.  
+> **Step 7** → Run notebooks to compare LLM vs RAG and experiment with agent flows.  
+```
 ---
 
 ## 🔑 Core Concepts Covered
@@ -124,9 +124,4 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 - 🔹 Try different embedding models for retrieval quality.  
 - 🔹 Build a 3-agent flow for compliance checks.  
 - 🔹 Add OCR + images (logos/seals) for multimodal retrieval.
-
-
-
-
-
-
+---
