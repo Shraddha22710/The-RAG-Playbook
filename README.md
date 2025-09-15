@@ -126,7 +126,6 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 
 
 
-# Visualizations
 
 ## Visualizations
 
