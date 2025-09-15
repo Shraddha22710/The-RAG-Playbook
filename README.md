@@ -130,12 +130,15 @@ flowchart TD
   U[User Query] --> R[Retriever]
   R -->|top-k passages| G[Generator (LLM)]
   G --> A[Answer + Citations]
-  subgraph KB["Knowledge Base"]
-    D1[Doc chunk 1]
-    D2[Doc chunk 2]
-    D3[Doc chunk n]
+
+  subgraph KB [Knowledge Base]
+    D1[Chunk 1]
+    D2[Chunk 2]
+    D3[Chunk n]
   end
+
   R --- KB
+
 
 ```
 
@@ -145,32 +148,32 @@ B. Agentic Compliance Copilot (multi-agent)
 
 flowchart LR
   Upload[User uploads scanned PDF/image] --> OCR[Azure Document Intelligence / OCR]
-  OCR --> DocAgent[Document Agent\n(extract text, tables, bboxes)]
-  DocAgent --> Retriever[Vector Retriever (FAISS / Azure Search)]
-  Retriever --> RegAgent[Regulation Agent\n(RAG: fetch rules)]
-  DocAgent --> GovAgent[Governance Agent\n(validate & explain)]
+  OCR --> DocAgent[Document Agent (extract text, tables, bboxes)]
+  DocAgent --> Retriever[Vector Retriever (FAISS or Azure Search)]
+  Retriever --> RegAgent[Regulation Agent (fetch rules)]
+  DocAgent --> GovAgent[Governance Agent (validate & explain)]
   RegAgent --> GovAgent
-  GovAgent --> Dashboard[Streamlit Dashboard\n(Flags + Snippets + Citations)]
+  GovAgent --> Dashboard[Streamlit Dashboard (Flags + Snippets + Citations)]
   Dashboard --> User
+
 
 ```
 
 C. Multi-modal RAG (text + images)
 
 ```mermaid
-
 flowchart TD
-  File[Scanned Document] --> OCR[OCR -> Text Chunks]
-  File --> ImgProc[Image Encoder (CLIP/GPT-4o-Vision)]
+  File[Scanned Document] --> OCR[OCR -> Text]
+  File --> ImgProc[Image Encoder: CLIP or Vision Model]
   OCR --> TextEmb[Text Embeddings]
   ImgProc --> ImgEmb[Image Embeddings]
-  TextEmb --> Index[Vector Index (unified)]
+  TextEmb --> Index[Vector Index]
   ImgEmb --> Index
-  Query --> QEmb[Query Embedding]
+  Query[User Query] --> QEmb[Query Embedding]
   QEmb --> Index
-  Index --> TopK[Top-K results (text + images)]
+  Index --> TopK[Top-K results]
   TopK --> LLM[LLM (RAG)]
-  LLM --> Output[Answer + Visual Evidence (image snippets)]
+  LLM --> Output[Answer + Citations + Evidence]
 
 ```
 
