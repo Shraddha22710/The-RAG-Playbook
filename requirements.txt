@@ -1,1 +1,18 @@
+streamlit
+pymupdf
+Pillow
+pytesseract
+opencv-python
+sentence-transformers>=2.2.2
+faiss-cpu
+numpy
+pandas
+tqdm
+python-dotenv
+scikit-learn
+langchain
+openai
+azure-ai-formrecognizer
+azure-identity
+azure-storage-blob
 
