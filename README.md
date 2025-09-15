@@ -17,40 +17,40 @@ This repo is for:
 
 ## 📂 Repo Map
 
-awesome-rag-playbook/
-├── README.md <- You are here
-├── requirements.txt <- Python dependencies
+The-RAG-Playbook/
+├── README.md               <- You are here
+├── requirements.txt        <- Python dependencies
 │
-├── data/ <- Documents & built embeddings
-│ ├── documents/ <- Sample contracts, regulations, invoices
-│ └── embeddings/ <- FAISS index + metadata
+├── data/                   <- Documents & built embeddings
+│   ├── documents/          <- Sample contracts, regulations, invoices
+│   └── embeddings/         <- FAISS index + metadata
 │
-├── docs/ <- Learning modules
-│ ├── 01_intro_to_rag.md
-│ ├── 02_chunking.md
-│ ├── 03_retrievers.md
-│ ├── 04_vector_dbs.md
-│ ├── 05_advanced_rag.md
-│ ├── 06_production_rag.md
-│ └── glossary.md
+├── docs/                   <- Learning modules
+│   ├── 01_intro_to_rag.md
+│   ├── 02_chunking.md
+│   ├── 03_retrievers.md
+│   ├── 04_vector_dbs.md
+│   ├── 05_advanced_rag.md
+│   ├── 06_production_rag.md
+│   └── glossary.md
 │
-├── src/ <- Core Python modules
-│ ├── chunking.py
-│ ├── simple_rag.py
-│ ├── rag_pipeline.py
-│ ├── agents.py
-│ └── app.py
+├── src/                    <- Core Python modules
+│   ├── chunking.py
+│   ├── simple_rag.py
+│   ├── rag_pipeline.py
+│   ├── agents.py
+│   └── app.py
 │
-├── notebooks/ <- Interactive experiments
-│ ├── 01_basic_rag.ipynb
-│ ├── 02_chunking_demo.ipynb
-│ ├── 03_faiss_demo.ipynb
-│ ├── 04_multi_agent_rag.ipynb
-│ └── 05_advanced_patterns.ipynb
+├── notebooks/              <- Interactive experiments
+│   ├── 01_basic_rag.ipynb
+│   ├── 02_chunking_demo.ipynb
+│   ├── 03_faiss_demo.ipynb
+│   ├── 04_multi_agent_rag.ipynb
+│   └── 05_advanced_patterns.ipynb
 │
-└── evaluation/ <- Metrics & reports
-├── metrics.py
-└── evaluation_report.md
+└── evaluation/             <- Metrics & reports
+    ├── metrics.py
+    └── evaluation_report.md
 
 
 
