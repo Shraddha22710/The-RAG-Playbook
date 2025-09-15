@@ -138,5 +138,6 @@ flowchart TD
     D3[Chunk n]
   end
 
-  R --- KB```
+  R --- KB
+```mermaid
 
