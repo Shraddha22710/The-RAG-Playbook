@@ -1,7 +1,7 @@
 ![banner](docs/1.svg)
 
 <!--
-Keywords: Retrieval-Augmented Generation, RAG, Generative AI, Vector Database, FAISS, LangChain, Azure OpenAI, Compliance AI, Audit AI, Document Intelligence, Multi-Agent AI, EY Capstone
+Keywords: Retrieval-Augmented Generation, RAG, Generative AI, Vector Database, FAISS, LangChain, Azure OpenAI, Compliance AI, Audit AI, Document Intelligence, Multi-Agent AI.
 -->
 
 ---
@@ -13,7 +13,7 @@ It combines **conceptual docs, hands-on code, case studies, and production best 
 This repo is for:
 - 🧑‍🎓 **Students & Newbies** → step-by-step explanations, FAQs, and demos.  
 - 👩‍💻 **Engineers** → reusable Python modules (chunking, retrievers, FAISS).  
-- 🏢 **Industry/Consultants** → business framing, compliance use-cases, enterprise readiness.
+- 🏢 **Industry Professionals/Tech Consultants** → business framing, compliance use-cases, enterprise readiness.
 
 ---
 
@@ -64,8 +64,9 @@ The-RAG-Playbook/
 
 1. **Clone repository**
 ```yaml
-git clone https://github.com/<yourname>/awesome-rag-playbook.git
-cd awesome-rag-playbook
+git clone https://github.com/Shraddha22710/The-RAG-Playbook.git
+cd The-RAG-Playbook
+
 ```
 
 2. **Create virtual environment & install**
@@ -94,15 +95,15 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 ```
 
 ## 🎓 Learning Roadmap
-```
-> **Step 1** → Intro to RAG (GenAI vs RAG vs Agents).  
-> **Step 2** → Chunking Strategies + try `src/chunking.py`.  
-> **Step 3** → Build FAISS index with `src/simple_rag.py`.  
-> **Step 4** → Study Retrievers & `rag_pipeline.py`.  
-> **Step 5** → Explore Advanced RAG (multi-hop, multimodal).  
-> **Step 6** → Production RAG: A/B testing, security, privacy.  
-> **Step 7** → Run notebooks to compare LLM vs RAG and experiment with agent flows.  
-```
+
+1. Intro to RAG → GenAI vs RAG vs Agents  
+2. Chunking Strategies → try `src/chunking.py`  
+3. Build FAISS index with `src/simple_rag.py`  
+4. Study Retrievers → explore `rag_pipeline.py`  
+5. Advanced RAG → multi-hop, multimodal, hierarchical  
+6. Production RAG → A/B testing, security, privacy  
+7. Hands-on → run notebooks & experiment with agent flows  
+
 ---
 
 ## 🔑 Core Concepts Covered
