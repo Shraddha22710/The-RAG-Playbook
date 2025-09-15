@@ -1,1 +1,6 @@
+This contract is made on 10-Jan-2025 between Alpha Inc. and Beta Ltd.
+
+Clause 1: Confidentiality — Parties agree to keep information private.
+Clause 2: Termination — Either party may terminate with 30 days written notice.
+Clause 3: Data Protection — Must comply with GDPR for handling user data.
 
