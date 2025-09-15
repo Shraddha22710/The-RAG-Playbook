@@ -16,7 +16,7 @@ This repo is for:
 ---
 
 ## 📂 Repo Map
-
+```
 The-RAG-Playbook/
 ├── README.md               <- You are here
 ├── requirements.txt        <- Python dependencies
@@ -51,7 +51,7 @@ The-RAG-Playbook/
 └── evaluation/             <- Metrics & reports
     ├── metrics.py
     └── evaluation_report.md
-
+```
 
 
 ---
