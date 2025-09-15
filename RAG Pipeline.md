@@ -1,3 +1,4 @@
+```
 flowchart TD
   U[User Query] --> R[Retriever]
   R -->|top-k passages| G[Generator (LLM)]
@@ -8,3 +9,4 @@ flowchart TD
     D3[Doc chunk n]
   end
   R --- KB
+```
