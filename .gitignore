@@ -8,6 +8,11 @@ env/
 venv/
 .Python
 
+# Virtual envs
+.venv/
+venv/
+env/
+
 # Jupyter
 .ipynb_checkpoints
 
@@ -18,13 +23,30 @@ data/embeddings/
 *.sqlite
 *.db
 
+# Large files
+*.bin
+*.tar.gz
+*.zip
+
 # OS
 .DS_Store
 Thumbs.db
 
-# IDEs
+# IDE
 .vscode/
 .idea/
 
 # Logs
 *.log
+
+# Env / secrets
+.env
+.env.*
+secrets.json
+credentials.json
+
+# Streamlit cache
+.streamlit/
+
+# Terraform / infra files (if any)
+*.tfstate
