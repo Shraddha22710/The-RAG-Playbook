@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+.venv/
+venv/
+.Python
+
+# Jupyter
+.ipynb_checkpoints
+
+# Data & indexes
+data/embeddings/
+*.index
+*.faiss
+*.sqlite
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
