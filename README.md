@@ -121,9 +121,12 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 - 🔹 Build a 3-agent flow for compliance checks.  
 - 🔹 Add OCR + images (logos/seals) for multimodal retrieval.
 
-## Visualizations
-A. RAG Pipeline
+---
 
+
+## Visualizations
+
+### A. RAG Pipeline
 ```mermaid
 flowchart TD
   U[User Query] --> R[Retriever]
@@ -137,56 +140,5 @@ flowchart TD
   end
 
   R --- KB
-```
 
-B. Agentic Compliance Copilot (multi-agent)
-
-```mermaid
-flowchart LR
-  Upload[User uploads scanned PDF/image] --> OCR[Azure Document Intelligence / OCR]
-  OCR --> DocAgent[Document Agent (extract text, tables, bboxes)]
-  DocAgent --> Retriever[Vector Retriever (FAISS or Azure Search)]
-  Retriever --> RegAgent[Regulation Agent (fetch rules)]
-  DocAgent --> GovAgent[Governance Agent (validate & explain)]
-  RegAgent --> GovAgent
-  GovAgent --> Dashboard[Streamlit Dashboard (Flags + Snippets + Citations)]
-  Dashboard --> User
-
-```
-
-C. Multi-modal RAG (text + images)
-
-```mermaid
-
-flowchart TD
-  File[Scanned Document] --> OCR[OCR -> Text]
-  File --> ImgProc[Image Encoder: CLIP or Vision Model]
-  OCR --> TextEmb[Text Embeddings]
-  ImgProc --> ImgEmb[Image Embeddings]
-  TextEmb --> Index[Vector Index]
-  ImgEmb --> Index
-  Query[User Query] --> QEmb[Query Embedding]
-  QEmb --> Index
-  Index --> TopK[Top-K results]
-  TopK --> LLM[LLM (RAG)]
-  LLM --> Output[Answer + Citations + Evidence]
-
-```
-
-D. Evaluation & A/B Testing Flow
-
-```mermaid
-
-flowchart TD
-  Users --> SplitA[Variant A]
-  Users --> SplitB[Variant B]
-  SplitA --> SystemA[RAG variant A]
-  SplitB --> SystemB[RAG variant B]
-  SystemA --> MetricsA[Collect metrics]
-  SystemB --> MetricsB[Collect metrics]
-  MetricsA --> Analysis[Statistical Analysis]
-  MetricsB --> Analysis
-  Analysis --> Decision[Promote winning variant]
-
-```
-
+---
