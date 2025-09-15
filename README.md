@@ -1,6 +1,4 @@
-# 📘 The RAG Playbook
-
-**From RAG basics to enterprise copilots — one repo for learners, engineers, and professionals.**
+![banner](docs/images/rag_banner.svg)
 
 ---
 
