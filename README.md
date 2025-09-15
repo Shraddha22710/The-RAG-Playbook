@@ -119,4 +119,66 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 - 🔹 Test chunk sizes & overlap, measure Recall@5.  
 - 🔹 Try different embedding models for retrieval quality.  
 - 🔹 Build a 3-agent flow for compliance checks.  
-- 🔹 Add OCR + images (logos/seals) for multimodal retrieval.  
+- 🔹 Add OCR + images (logos/seals) for multimodal retrieval.
+
+## Visualizations
+A. RAG Pipeline
+```mermaid
+flowchart TD
+  U[User Query] --> R[Retriever]
+  R -->|top-k passages| G[Generator (LLM)]
+  G --> A[Answer + Citations]
+  subgraph KB["Knowledge Base"]
+    D1[Doc chunk 1]
+    D2[Doc chunk 2]
+    D3[Doc chunk n]
+  end
+  R --- KB
+```
+
+B. Agentic Compliance Copilot (multi-agent)
+```mermaid
+flowchart LR
+  Upload[User uploads scanned PDF/image] --> OCR[Azure Document Intelligence / OCR]
+  OCR --> DocAgent[Document Agent\n(extract text, tables, bboxes)]
+  DocAgent --> Retriever[Vector Retriever (FAISS / Azure Search)]
+  Retriever --> RegAgent[Regulation Agent\n(RAG: fetch rules)]
+  DocAgent --> GovAgent[Governance Agent\n(validate & explain)]
+  RegAgent --> GovAgent
+  GovAgent --> Dashboard[Streamlit Dashboard\n(Flags + Snippets + Citations)]
+  Dashboard --> User
+```
+
+C. Multi-modal RAG (text + images)
+```mermaid
+flowchart TD
+  File[Scanned Document] --> OCR[OCR -> Text Chunks]
+  File --> ImgProc[Image Encoder (CLIP/GPT-4o-Vision)]
+  OCR --> TextEmb[Text Embeddings]
+  ImgProc --> ImgEmb[Image Embeddings]
+  TextEmb --> Index[Vector Index (unified)]
+  ImgEmb --> Index
+  Query --> QEmb[Query Embedding]
+  QEmb --> Index
+  Index --> TopK[Top-K results (text + images)]
+  TopK --> LLM[LLM (RAG)]
+  LLM --> Output[Answer + Visual Evidence (image snippets)]
+```
+
+D. Evaluation & A/B Testing Flow
+
+```mermaid
+
+flowchart TD
+  Users --> SplitA[Variant A]
+  Users --> SplitB[Variant B]
+  SplitA --> SystemA[RAG variant A]
+  SplitB --> SystemB[RAG variant B]
+  SystemA --> MetricsA[Collect metrics]
+  SystemB --> MetricsB[Collect metrics]
+  MetricsA --> Analysis[Statistical Analysis]
+  MetricsB --> Analysis
+  Analysis --> Decision[Promote winning variant]
+
+```
+
