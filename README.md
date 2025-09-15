@@ -135,11 +135,14 @@ flowchart TD
   U[User Query] --> R[Retriever]
   R -->|top-k passages| G[Generator (LLM)]
   G --> A[Answer + Citations]
-  subgraph KB [Knowledge Base]
+
+subgraph KB [Knowledge Base]
     D1[Chunk 1]
     D2[Chunk 2]
     D3[Chunk n]
   end
+
 R --- KB
 ```
+
 
