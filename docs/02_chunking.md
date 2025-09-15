@@ -98,7 +98,7 @@ semantic_chunks = semantic_chunking(text, max_tokens=30, overlap_tokens=5)
 
 print("Fixed chunks:", fixed_chunks)
 print("Semantic chunks:", semantic_chunks)
-
+```
 
 🎯 Key Takeaway
 
