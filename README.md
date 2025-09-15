@@ -1,5 +1,9 @@
 ![banner](docs/1.svg)
 
+<!--
+Keywords: Retrieval-Augmented Generation, RAG, Generative AI, Vector Database, FAISS, LangChain, Azure OpenAI, Compliance AI, Audit AI, Document Intelligence, Multi-Agent AI, EY Capstone
+-->
+
 ---
 
 ## 🚀 Overview
