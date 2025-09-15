@@ -1,1 +1,8 @@
+Customer Name: John Doe
+Date of Birth: 01-Jan-1990
+Document: Passport
+Passport Number: X1234567
+Issued by: Government of India
+Address: 123 MG Road, Mumbai
+Note: Verify address proof and signature match.
 
