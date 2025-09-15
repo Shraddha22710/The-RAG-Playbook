@@ -64,9 +64,9 @@ awesome-rag-playbook/
 ```bash
 git clone https://github.com/<yourname>/awesome-rag-playbook.git
 cd awesome-rag-playbook
-
+```
 2. Create virtual environment & install
-'''
+   ```python
 python -m venv .venv
 # mac/linux
 source .venv/bin/activate
@@ -74,21 +74,21 @@ source .venv/bin/activate
 .venv\Scripts\activate
 
 pip install -r requirements.txt
-'''
+```
 3. Add sample documents
 Put .txt files into data/documents/ (regulation snippets, contracts, invoices).
 
 4. Build index & test retrieval
-'''
+```python
 python src/simple_rag.py --build-index --data-dir data/documents
 python src/simple_rag.py --query "Does this contract mention GDPR data transfers?"
+```
 
-'''
 5. Run demo app
-'''
+```python
 streamlit run src/app.py
 
-'''
+```
 
 🎓 Learning Roadmap
 
