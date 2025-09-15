@@ -139,21 +139,4 @@ flowchart TD
   end
 
   R --- KB
-```
-
-
-B. Agentic Compliance Copilot (multi-agent)
-```mermaid
-flowchart LR
-  Upload[User uploads scanned PDF/image] --> OCR[Azure Document Intelligence / OCR]
-  OCR --> DocAgent[Document Agent (extract text, tables, bboxes)]
-  DocAgent --> Retriever[Vector Retriever (FAISS or Azure Search)]
-  Retriever --> RegAgent[Regulation Agent (fetch rules)]
-  DocAgent --> GovAgent[Governance Agent (validate & explain)]
-  RegAgent --> GovAgent
-  GovAgent --> Dashboard[Streamlit Dashboard (Flags + Snippets + Citations)]
-  Dashboard --> User
-  ```
-
-
 
