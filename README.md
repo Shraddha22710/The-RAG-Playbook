@@ -125,7 +125,6 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 A. RAG Pipeline
 
 ```mermaid
-
 flowchart TD
   U[User Query] --> R[Retriever]
   R -->|top-k passages| G[Generator (LLM)]
@@ -138,14 +137,11 @@ flowchart TD
   end
 
   R --- KB
-
-
 ```
 
 B. Agentic Compliance Copilot (multi-agent)
 
 ```mermaid
-
 flowchart LR
   Upload[User uploads scanned PDF/image] --> OCR[Azure Document Intelligence / OCR]
   OCR --> DocAgent[Document Agent (extract text, tables, bboxes)]
@@ -156,12 +152,12 @@ flowchart LR
   GovAgent --> Dashboard[Streamlit Dashboard (Flags + Snippets + Citations)]
   Dashboard --> User
 
-
 ```
 
 C. Multi-modal RAG (text + images)
 
 ```mermaid
+
 flowchart TD
   File[Scanned Document] --> OCR[OCR -> Text]
   File --> ImgProc[Image Encoder: CLIP or Vision Model]
