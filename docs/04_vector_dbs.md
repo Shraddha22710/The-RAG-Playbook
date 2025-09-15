@@ -55,7 +55,7 @@ qv = qv / np.linalg.norm(qv, axis=1, keepdims=True)
 D, I = index.search(qv.astype("float32"), k=1)
 
 print("Best match:", docs[I[0][0]])
-
+```
 
 🧠 FAQ
 
