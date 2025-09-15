@@ -121,9 +121,6 @@ python src/simple_rag.py --query "Does this contract mention GDPR data transfers
 - 🔹 Build a 3-agent flow for compliance checks.  
 - 🔹 Add OCR + images (logos/seals) for multimodal retrieval.
 
----
-
-
 
 
 
